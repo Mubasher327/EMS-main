@@ -14,8 +14,13 @@ public class EmployeeModel {
     private double salary;
     private DepartmentModel departmentModel;
 
+    public static String addAttribute(String employee, EmployeeModel employeeModel)
+    {
+        return "Employee registered Successfully";
+    }
 
-public Employee dissamble(){
+
+    public Employee dissamble(){
 
     Employee employee=new Employee();
     employee.setId(empl_Id);
