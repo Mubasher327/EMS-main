@@ -1,6 +1,5 @@
 package com.ems.emploee.services;
 
-import com.ems.emploee.Repository.departmentrepository;
 import com.ems.emploee.Repository.registeredemployeerepository;
 import com.ems.emploee.entity.Employee;
 import com.ems.emploee.model.EmployeeModel;
@@ -12,8 +11,9 @@ public class RegisteredEmployeeService {
 
  @Autowired
  private registeredemployeerepository registeremployeeRepo;
- @Autowired
- DepartmentService departmentService;
+
+
+
  public EmployeeModel addEmployee(EmployeeModel employee){
   return employee.assemble(registeremployeeRepo.save(employee.dissamble()));
 

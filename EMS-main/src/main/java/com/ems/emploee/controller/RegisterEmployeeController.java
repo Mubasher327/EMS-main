@@ -1,5 +1,6 @@
 package com.ems.emploee.controller;
 
+
 import com.ems.emploee.entity.Employee;
 import com.ems.emploee.model.EmployeeModel;
 import com.ems.emploee.services.RegisteredEmployeeService;
@@ -15,12 +16,13 @@ import java.util.List;
 public class RegisterEmployeeController {
     @Autowired
     RegisteredEmployeeService registeredEmployeeServices;
+
     @PostMapping("/save")
     public EmployeeModel addEmployee(@RequestBody EmployeeModel employeeModel)
     {
         return registeredEmployeeServices.addEmployee(employeeModel);
     }
-    @GetMapping("/register")
+/*    @GetMapping("/register")
     public String showForm(EmployeeModel employeeModel) {
         EmployeeModel user = new EmployeeModel();
         EmployeeModel.addAttribute("employee", employeeModel);
@@ -34,7 +36,7 @@ public class RegisterEmployeeController {
     public String submitForm(@ModelAttribute("user") EmployeeModel employeeModel) {
         System.out.println(employeeModel);
         return "register_success";
-    }
+    }*/
 @PutMapping("/update")
     public void updateEmployee(@RequestBody Employee employee)
 {

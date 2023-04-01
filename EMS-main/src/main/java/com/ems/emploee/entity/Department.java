@@ -18,8 +18,7 @@ public class Department {
     private String departName;
     @Column(name="description")
     private String description;
-    @Column(name="salary_range")
-    private double salaryRange;
+
     @OneToMany(mappedBy = "depart")
     private List<Employee> employ_list;
 }

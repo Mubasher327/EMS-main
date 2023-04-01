@@ -34,7 +34,7 @@ public class DepartmentModel {
         departmentModel.setId(department.getId());
         departmentModel.setDepartName(department.getDepartName());
         departmentModel.setDescription(department.getDescription());
-      //  departmentModel.setSalaryRange(department.getSalaryRange());
+
 
         return departmentModel;
     }
