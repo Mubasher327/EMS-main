@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 @Data
 public class AttendanceModel {
     private int id;
-    private Boolean is_emplPresent;
-    private int time_in;
-    private int time_out;
+    private Boolean isEmplPresent;
+    private int timeIn;
+    private int timeOut;
 
     private EmployeeModel employeeModel;
 
@@ -17,9 +17,9 @@ public class AttendanceModel {
 
         Attendance attendance=new Attendance();
         attendance.setId(id);
-        attendance.setIs_emplPresent(is_emplPresent);
-        attendance.setTimeIn(time_in);
-        attendance.setTimeOut(time_out);
+        attendance.setIsEmplPresent(isEmplPresent);
+        attendance.setTimeIn(timeIn);
+        attendance.setTimeOut(timeOut);
         attendance.setEmploy(employeeModel.dissamble());
         return attendance;
 
@@ -29,9 +29,9 @@ public class AttendanceModel {
         AttendanceModel attendanceModel=new AttendanceModel();
 
         attendanceModel.setId(attendance.getId());
-        attendanceModel.setIs_emplPresent(attendance.getIs_emplPresent());
-        attendanceModel.setTime_in(attendance.getTimeIn());
-        attendanceModel.setTime_out(attendance.getTimeOut());
+        attendanceModel.setIsEmplPresent(attendance.getIsEmplPresent());
+        attendanceModel.setTimeIn(attendance.getTimeIn());
+        attendanceModel.setTimeOut(attendance.getTimeOut());
         attendanceModel.setEmployeeModel(employeeModel.assemble(attendance.getEmploy()));
 
         return attendanceModel;

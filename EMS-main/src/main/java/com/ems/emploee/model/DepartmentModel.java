@@ -12,17 +12,17 @@ import org.springframework.stereotype.Component;
 @Data
 public class DepartmentModel {
     int id;
-    private String depart_name;
+    private String departName;
     private String description;
-    private double salary_range;
+   // private double salaryRange;
 
     public Department dissamble(){
         Department department=new Department();
 
-        department.setDepartName(depart_name);
+        department.setDepartName(departName);
         department.setId(id);
         department.setDescription(description);
-        department.setSalaryRange(salary_range);
+        //department.setSalaryRange(salary_range);
 
 
         return department;
@@ -32,9 +32,9 @@ public class DepartmentModel {
 
         DepartmentModel departmentModel=new DepartmentModel();
         departmentModel.setId(department.getId());
-        departmentModel.setDepart_name(department.getDepartName());
+        departmentModel.setDepartName(department.getDepartName());
         departmentModel.setDescription(department.getDescription());
-        departmentModel.setSalary_range(department.getSalaryRange());
+      //  departmentModel.setSalaryRange(department.getSalaryRange());
 
         return departmentModel;
     }

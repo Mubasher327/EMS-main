@@ -11,7 +11,7 @@ public class Attendance {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column private int Id;
     @Column(name="employee_present")
-    private Boolean is_emplPresent;
+    private Boolean isEmplPresent;
     @Column(name="time_in")
     private int timeIn;
     @Column(name="time_out")

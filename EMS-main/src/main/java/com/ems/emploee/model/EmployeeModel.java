@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class EmployeeModel {
-    private int empl_Id;
-    private String first_name;
-    private String last_name;
+    private int Id;
+    private String firstName;
+    private String lastName;
     private int age;
     private String designation;
     private double salary;
@@ -23,9 +23,9 @@ public class EmployeeModel {
     public Employee dissamble(){
 
     Employee employee=new Employee();
-    employee.setId(empl_Id);
-    employee.setFirstName(first_name);
-    employee.setLastName(last_name);
+    employee.setId(Id);
+    employee.setFirstName(firstName);
+    employee.setLastName(lastName);
     employee.setAge(age);
     employee.setDesignation(designation);
     employee.setSalary(salary);
@@ -39,9 +39,9 @@ public EmployeeModel assemble(Employee employee){
     EmployeeModel employeeModel=new EmployeeModel();
     DepartmentModel departmentModel1=new DepartmentModel();
 
-    employeeModel.setEmpl_Id(employee.getId());
-    employeeModel.setFirst_name(employee.getFirstName());
-    employeeModel.setLast_name(employee.getLastName());
+    employeeModel.setId(employee.getId());
+    employeeModel.setFirstName(employee.getFirstName());
+    employeeModel.setLastName(employee.getLastName());
     employeeModel.setAge(employee.getAge());
     employeeModel.setDesignation(employee.getDesignation());
     employeeModel.setSalary(employee.getSalary());
