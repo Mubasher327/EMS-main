@@ -29,14 +29,15 @@ public class EmployeeModel {
     employee.setAge(age);
     employee.setDesignation(designation);
     employee.setSalary(salary);
-    employee.setDepart(departmentModel.dissamble());
-    ;
+    employee.setDepart(this.departmentModel.dissamble());
+
     return employee;
 }
 
 public EmployeeModel assemble(Employee employee){
 
     EmployeeModel employeeModel=new EmployeeModel();
+    DepartmentModel departmentModel1=new DepartmentModel();
 
     employeeModel.setEmpl_Id(employee.getId());
     employeeModel.setFirst_name(employee.getFirstName());
@@ -44,7 +45,7 @@ public EmployeeModel assemble(Employee employee){
     employeeModel.setAge(employee.getAge());
     employeeModel.setDesignation(employee.getDesignation());
     employeeModel.setSalary(employee.getSalary());
-    employeeModel.setDepartmentModel(departmentModel.assemble(employee.getDepart()));
+    employeeModel.setDepartmentModel(departmentModel1.assemble(employee.getDepart()));
 
     return employeeModel;
     }

@@ -11,6 +11,7 @@ import java.util.List;
 @Table(name = "employee")
 public class Employee {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="employee_id")
     private int id;
     @Column(name="first_name")

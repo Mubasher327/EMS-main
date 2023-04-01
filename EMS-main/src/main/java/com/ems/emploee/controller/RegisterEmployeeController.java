@@ -47,7 +47,7 @@ public class RegisterEmployeeController {
 
 @GetMapping("/getById/{id}")
 
-   public Employee getEmployee(@PathVariable("id") int empl_Id)
+   public EmployeeModel getEmployee(@PathVariable(name = "id") int empl_Id)
     {
         return registeredEmployeeServices.getEmployee(empl_Id);
 }

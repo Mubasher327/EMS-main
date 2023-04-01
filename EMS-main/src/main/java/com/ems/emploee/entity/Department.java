@@ -11,6 +11,7 @@ import java.util.List;
 public class Department {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="depart_id")
     private int Id;
     @Column(name="depart_name")
@@ -19,9 +20,6 @@ public class Department {
     private String description;
     @Column(name="salary_range")
     private double salaryRange;
-    @OneToMany
+    @OneToMany(mappedBy = "depart")
     private List<Employee> employ_list;
-    
-
-
 }

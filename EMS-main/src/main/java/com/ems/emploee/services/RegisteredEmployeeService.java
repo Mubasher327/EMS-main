@@ -28,9 +28,9 @@ public class RegisteredEmployeeService {
   return "Deleted";
  }
 
- public Employee getEmployee(int empl_id){
-  Employee employee=registeremployeeRepo.findById(empl_id).get();
-  return employee;
+ public EmployeeModel getEmployee(int empl_id){
+  //Employee employee=registeremployeeRepo.findById(empl_id).get();
+  return new EmployeeModel().assemble(registeremployeeRepo.findById(empl_id).get());
  }
 
 }
